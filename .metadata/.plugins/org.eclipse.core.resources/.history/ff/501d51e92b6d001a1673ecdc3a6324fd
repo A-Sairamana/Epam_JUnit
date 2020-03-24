@@ -1,0 +1,15 @@
+ package junit_ht;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class first2CharsTest {
+
+	@Test
+	void testFirst2chars() {
+		 TestString  tStr=new TestString()
+		 String
+	}
+
+}

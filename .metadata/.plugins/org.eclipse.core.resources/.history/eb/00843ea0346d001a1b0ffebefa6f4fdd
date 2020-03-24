@@ -1,0 +1,70 @@
+ package junit_ht;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+
+
+
+class first2CharsTest {
+	
+	TestString tStr;
+	
+	@BeforeEach
+	void setUp()
+	{
+		tStr=new TestString();
+	}
+
+	@Test
+	void test1A() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("ABCD");
+		 assertEquals("BCD",actual);
+	}
+	
+	@Test
+	void test2A() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("AACD");
+		 assertEquals("CD",actual);
+	}
+	
+	@Test
+	void test1Ain2Position() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("BACD");
+		 assertEquals("BCD",actual);
+	}
+	
+	@Test
+	void testNoA() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("BBAA");
+		 assertEquals("BCD",actual);
+	}
+	
+	@Test
+	void test2ANLength() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("AABAA");
+		 assertEquals("BAA",actual);
+	}
+	
+	void testA() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("A");
+		 assertEquals("",actual);
+	}
+	
+	@Test
+	void emptyString() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("");
+		 assertEquals("",actual);
+	}
+	
+
+}

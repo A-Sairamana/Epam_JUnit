@@ -1,0 +1,30 @@
+ package junit_ht;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class first2CharsTest {
+
+	@Test
+	void test1A() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("ABCD");
+		 assertEquals("BCD",actual);
+	}
+	
+	@Test
+	void test2A() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("AACD");
+		 assertEquals("CD",actual);
+	}
+	@Test
+	void test1Ain2Position() {
+		 TestString  tStr=new TestString();
+		 String actual=tStr.checkFirst2Chars("BACD");
+		 assertEquals("BCD",actual);
+	}
+	
+
+}

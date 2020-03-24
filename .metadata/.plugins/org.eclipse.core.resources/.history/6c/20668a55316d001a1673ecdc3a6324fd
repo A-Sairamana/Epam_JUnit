@@ -1,0 +1,10 @@
+package junit_ht;
+
+public class TestString {
+	
+	public String checkFirst2Chars(String string) {
+	
+		return null;
+	}
+
+}
